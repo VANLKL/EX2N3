@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+    <!-- Web 应用的初始化参数（上下文参数） -->
+    <context-param>
+        <param-name>name</param-name>
+        <param-value>lkl</param-value> <!-- 姓名 -->
+    </context-param>
+    <context-param>
+        <param-name>pass</param-name>
+        <param-value>2205</param-value> <!-- 学号后四位 -->
+    </context-param>
+
+    <!-- DD 文件方式注册 Servlet，映射地址为 /demoServlet -->
+    <servlet>
+        <servlet-name>DemoServlet</servlet-name>
+        <servlet-class>cn.edu.cqust.ex2n3.DemoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DemoServlet</servlet-name>
+        <url-pattern>/demoServlet</url-pattern>
+    </servlet-mapping>
+</web-app>
